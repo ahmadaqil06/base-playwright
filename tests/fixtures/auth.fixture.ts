@@ -9,7 +9,7 @@ export const test = base.extend<Fixtures>({
   authenticatedPage: async ({ page }, use) => {
     const env = getEnv();
     await page.goto(env.url);
-    await page.fill('//input[@placeholder="Username"]', env.username);
+    await page.fill('//input[@placeholder="Username"]', env.username1);
     await page.fill('//input[@placeholder="Password"]', env.password);
     await page.click('//button[@type="submit"]');
     await page.waitForURL('**/viewSystemUsers');
